@@ -1,5 +1,16 @@
 #include<stdio.h>
 #include<string.h>
+int i = 25;
+int random();
+int random(){
+  if(i >= 25 && i <= 45){
+    i++;
+  }
+  else{
+    i = 25 ;
+  }
+  return i; 
+}
 int main(){
 char b[100];
 int s = 0;
@@ -30,6 +41,8 @@ else if(strcmp(b,"status")==0){
   else{
     printf("LED OFF\n");
   }
+}else if(strcmp(b,"temp")==0){
+  printf("%d C\n",random());
 }
 else{
   printf("unknown command\n");
